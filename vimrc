@@ -17,6 +17,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'AndrewRadev/linediff.vim'
+Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -47,7 +48,12 @@ let g:jsx_ext_required=0
 
 " Syntastic settings
 let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_debug=3
 let g:syntastic_filetype_map = {'html.handlebars': 'handlebars'}
+
+" Prettier settings
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.css,*.scss Prettier
 
 " Tagbar settings
 "autocmd VimEnter * nested :TagbarOpen
