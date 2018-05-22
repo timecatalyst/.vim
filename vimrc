@@ -18,6 +18,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'AndrewRadev/linediff.vim'
 Plugin 'prettier/vim-prettier'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -33,10 +34,11 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set hlsearch!
+set hlsearch
 "colorscheme evening
 filetype off
 syntax on
+color dracula
 filetype plugin indent on
 
 " NERDTree settings
@@ -60,3 +62,4 @@ autocmd BufWritePre *.js,*.css,*.scss Prettier
 nmap <F8> :TagbarToggle<CR>
 
 let g:mustache_abbreviations = 1
+highlight link xmlEndTag xmlTag
