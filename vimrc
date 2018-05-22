@@ -25,7 +25,6 @@ call vundle#end()
 
 " General settings
 set number
-set background=dark
 set scrolloff=5
 set smartcase
 set ruler
@@ -35,10 +34,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set hlsearch
-"colorscheme evening
 filetype off
 syntax on
-color dracula
 filetype plugin indent on
 
 " NERDTree settings
@@ -63,3 +60,6 @@ nmap <F8> :TagbarToggle<CR>
 
 let g:mustache_abbreviations = 1
 highlight link xmlEndTag xmlTag
+
+let g:dracula_italic=0
+colorscheme dracula
